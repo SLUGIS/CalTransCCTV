@@ -32,7 +32,7 @@ function getImages(region)
     var current_time = Date.now();
 
     // get an Array containing dicts of the selected region (if it's not "ALL")
-    if (region != "ALL") 
+    if (region != "ALL")
     {
         regional_feeds = allfeeds[region];
 
@@ -42,17 +42,17 @@ function getImages(region)
         {
             regional_feeds[i].img += ("?" + current_time);
         }
-        
+
         // Now go set the image feeds
         var row = null;
-        row = setImages(regional_feeds, row);    
+        row = setImages(regional_feeds, row);
         var camera_div = document.getElementById("camera_table");
         camera_div.appendChild(row);
     }
-    else 
+    else
     {
-        regional_feeds = allfeeds; 
-        var row = null;       
+        regional_feeds = allfeeds;
+        var row = null;
         for (var n = 0, l = all_regions.length; n < l; n ++)
         {
             for (var i = 0, len = regional_feeds[all_regions[n]].length; i < len; i++)
@@ -60,7 +60,7 @@ function getImages(region)
                 regional_feeds[all_regions[n]][i].img += ("?" + current_time);
             }
             // Now go set the image feeds
-            row = setImages(regional_feeds[all_regions[n]], row); 
+            row = setImages(regional_feeds[all_regions[n]], row);
         }
 
         var camera_div = document.getElementById("camera_table");
@@ -88,7 +88,7 @@ function setImages(cameras, row)
     }
     // Get the Camera table
     var camera_div = document.getElementById("camera_table");
-    
+
 
     for (var i = 0, len = cameras.length; i < len; i++, camera_count++)
     {
@@ -142,64 +142,64 @@ function removeCurrentFeeds()
       var pismo_beach_feeds = all_feeds["PB"];
  This will give us an array that points to the individual dictionaries containing  names/images of all
  pismo beach traffic cameras */
-function getFeeds() 
+function getFeeds()
 {
     var feeds = {
-    "PR" : [ 
+    "PR" : [
         {"name":'Paso Robles : SR-46 East',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/SR-46-East.jpg'} 
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101sr46east/us101sr46east.jpg'}
     ],
-    "AT" : [ 
+    "AT" : [
         {"name":'Atascadero : Traffic Way',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Traffic-Way.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101trafficway/us101trafficway.jpg'},
         {"name":'Atascadero : Hwy 41 West in Atascadero',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Hwy-41-West.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101sr41west/us101sr41west.jpg'},
         {"name":'Atascadero : Curbaril',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Curbaril.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101curbaril/us101curbaril.jpg'},
         {"name":'Atascadero :Santa Rosa Rd',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Santa-Rosa-Road.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101santarosard/us101santarosard.jpg'},
         {"name":'Atascadero : Santa Barbara Rd',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Santa-Barbara-Road.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101santabarbarard/us101santabarbarard.jpg'},
         {"name":'Atascadero : SR-58',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/SR-58.jpg'}
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101sr58/us101sr58.jpg'}
     ],
     "SLO" : [{"name":'San Luis Obispo : Fox Hollow',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Fox-Hollow.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101foxhollow/us101foxhollow.jpg'},
         {"name":'San Luis Obispo : Broad Street',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Broad-Street.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101broadstreet/us101broadstreet.jpg'},
         {"name":'San Luis Obispo : Marsh Street',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Marsh-Street.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101marshstreet/us101marshstreet.jpg'},
         {"name":'San Luis Obispo : Monterey Street',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Monterey-Street.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101montereystreet/us101montereystreet.jpg'},
         {"name":'San Luis Obispo : Madonna Road',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Madonna-Road.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101madonnaroad/us101madonnaroad.jpg'},
         {"name":'San Luis Obispo : Los Osos Valley Road',
-        "img":'http://www.dot.ca.gov/cwwp2/data/d5/cctv/image/Los-Osos-Valley-Road.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101losososvalleyroad/us101losososvalleyroad.jpg'},
         {"name":'San Luis Obispo : South Higuera Street',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/South-Higuera.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101southhiguerastreet/us101southhiguerastreet.jpg'},
         {"name":'San Luis Obispo : San Luis Bay Drive',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/San-Luis-Bay-Drive.jpg'}
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101sanluisbaydrive/us101sanluisbaydrive.jpg'}
     ],
     "PB" : [{"name":'Pismo Beach : Avila Beach Drive',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Avila-Beach-Drive.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101avilabeachdrive/us101avilabeachdrive.jpg'},
         {"name":'Pismo Beach : Spyglass',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Spyglass.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101spyglassdr/us101spyglassdr.jpg'},
         {"name":'Pismo Beach : Mattie Road',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Mattie-Road.jpg'},
-        {"name":'Pismo Beach : Dolliver',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Dolliver.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101mattieroad/us101mattieroad.jpg'},
+        {"name":'Pismo Beach : 101 at Bello and Route 1',
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101sr1andbellost/us101sr1andbellost.jpg'},
         {"name":'Pismo Beach : 4th Street',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/4th-Street.jpg'}
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us1014thstreet/us1014thstreet.jpg'}
     ],
     "AG" : [{"name":'Arroyo Grande : Camino Mercado',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Camino-Mercado.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101caminomercado/us101caminomercado.jpg'},
         {"name":'Arroyo Grande : Grand Avenue',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Grand-Avenue.jpg'}
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101grandavenue/us101grandavenue.jpg'}
     ],
     "SM" : [{"name":'Santa Maria : SR-135 Broadway',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/SR-135.jpg'},
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101sr135broadway/us101sr135broadway.jpg'},
         {"name":'Santa Maria : Union Valley Parkway in Santa Maria',
-        "img":'http://www1.dot.ca.gov/cwwp2/data/d5/cctv/image/Union-Valley-Parkway.jpg'}
+        "img":'http://cwwp2.dot.ca.gov/data/d5/cctv/image/us101unionvalleyparkway/us101unionvalleyparkway.jpg'}
     ]};
     return feeds;
 }
