@@ -441,7 +441,7 @@ fieldset[disabled] .btn-link:focus {
 }
 
 .glyphicon-random:before {
-  content: "\e12";
+  content: "\e27";
 }
 
 .glyphicon-exclamation-sign:before {
