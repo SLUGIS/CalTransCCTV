@@ -440,6 +440,10 @@ fieldset[disabled] .btn-link:focus {
   content: "\e199";
 }
 
+.glyphicon-random:before {
+  content: "\e12";
+}
+
 .glyphicon-exclamation-sign:before {
   content: "\e101";
 }
